@@ -1,0 +1,102 @@
+<!-- activity_add_diary_note.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_blue">
+
+    <!-- Background Image -->
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/background_image"-->
+<!--        android:scaleType="centerCrop"/>-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/bangers"
+        android:text="Add Diary Note"
+        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <!-- Title input -->
+
+    <ImageView
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textInputLayoutTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_toEndOf="@+id/title"
+        android:src="@drawable/baseline_save_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_margin="24dp"
+        android:hint="Title"
+        android:textAlignment="center"
+        android:textColorHint="@color/black">
+<!--        app:boxStrokeColor="@color/white"-->
+<!--        app:boxStrokeWidth="2dp">-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/text_boarder"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Date and Time input -->
+    <EditText
+        android:id="@+id/editTextDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/textInputLayoutTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/text_boarder"
+        android:hint="Date and Time"
+        android:maxLines="1"
+        android:textColorHint="@color/black"
+        android:textAlignment="center"
+        android:onClick="showDatePicker"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editTextDateTime"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/text_boarder"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+</RelativeLayout>
