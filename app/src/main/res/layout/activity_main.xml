@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/soft_blue"
+    android:background="@drawable/diary4"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/diarylogo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="392dp"
         android:fontFamily="monospace"
-        android:text="ThoughtfulTracks"
+        android:text="ThoughtLog"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/black"
