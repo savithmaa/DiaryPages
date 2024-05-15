@@ -33,7 +33,7 @@ class AddDiaryPages : AppCompatActivity() {
             val title = binding.editTextTitle.text.toString()
             val date = binding.editTextDateTime.text.toString()
             val diaryNote = binding.editTextContent.text.toString()
-            val diary = Diary(0, title, diaryNote, date)
+            val diary = Diary(0, title, date, diaryNote)
             db.addDiary(diary)
             finish()
             Toast.makeText(this, "Diary Saved", Toast.LENGTH_SHORT).show()
